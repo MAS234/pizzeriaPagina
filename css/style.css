@@ -95,7 +95,7 @@ body{
 
     display: grid;
     align-content: center;
-    gap: 2em;
+    gap: 6em;
     padding-left: 5%;
     transform: var(--estado-menu);
     transition: 0.5s transform;
@@ -192,7 +192,7 @@ i{
     list-style: none;
     color: gray;
     font-size: 10px;
-    margin: auto -5%;
+    margin: 5px -5%;
     
 }
 
