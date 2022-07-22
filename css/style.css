@@ -1,0 +1,302 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+
+    background-image: url(https://images.vexels.com/media/users/3/262561/isolated/preview/d4e8a9986c2b7eb249a5f57b6684615a-comida-comida-pizza.png);
+    background-position: center;
+    margin: auto;
+    background-size: 250px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:#d62828 ;
+
+    font-family: sans-serif;
+}
+
+/* MENU  */
+
+.contenedor{
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.navegador{
+
+    --estado-cerrado:scale(0);
+    --estado-hamburguesa:scale(1);
+    --estado-menu:translate(-100%);
+
+    padding: 5px  0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2,max-content);
+}
+
+.navegador:target{
+
+    --estado-cerrado:scale(1);
+    --estado-hamburguesa:scale(0);
+    --estado-menu:translate(0);
+}
+
+.titulo_menu{
+
+    margin-left: 10px;
+    font-size: 40px;
+    z-index: 1;
+}
+
+.titulo_menu img{
+
+    width: 60px;
+}
+
+.hamburguesa,
+.cerrado{
+
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: 0.4 transform;
+}
+
+.hamburguesa{
+    
+    transform: var(--estado-hamburguesa);
+}
+
+.cerrado{
+
+    transform:var(--estado-cerrado);
+}
+
+.icono_menu{
+
+    width: 400px;
+}
+
+.navegadorLink{
+
+    background-color: rgba(0, 0, 0, 0.607);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+    transform: var(--estado-menu);
+    transition: 0.5s transform;
+
+}
+
+.elemento{
+
+    list-style: none;
+}
+
+.enlace{
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+
+}
+
+.enlace:hover{
+
+    color: gold;
+
+}
+
+i{
+    color: black;
+    font-size: 30px;
+}
+
+
+/* SECCION UNO  */
+
+.tituloUno{
+
+    text-align: center;
+    color: white;
+    background-color: #fcbf49;
+    margin: 0 10%;
+    border-radius: 10px;
+}
+
+.contenedorSeccion{
+
+    background-color: transparent;
+    height: 439px;
+    
+}
+
+.contenedorPromos{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo{
+
+    box-shadow:2px 2px 10px black;
+    padding: 10px;
+    height: 180px;
+    width: 38%;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 10%;
+    overflow: hidden auto;
+    cursor: pointer;
+}
+
+.promo:hover{
+
+    box-shadow:2px 2px 10px gray;
+}
+
+.promo_img  img{
+
+    width: 100%;
+}
+
+.promo_text{
+
+    width: auto;
+}
+
+.promo_text h2{
+
+    font-size: 10px;
+    text-align: center;
+}
+
+
+.promo_text ul li{
+    
+    list-style: none;
+    color: gray;
+    font-size: 10px;
+    margin: auto -20%;
+    
+}
+
+
+/* SECCION DOS  */
+
+.contenedorSeccionDos{
+
+    height: 520px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+
+    .navegador{
+        --estado-cerrado:scale(0);
+        --estado-hamburguesa:scale(0);
+    }
+    
+    .navegador:target{
+        --estado-hamburguesa:scale(0);
+    }
+
+    .navegadorLink{
+
+        background-color: unset;
+        position: unset;
+        padding: 0;
+        gap: 1.5em;
+        grid-auto-flow: column;
+         
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+
+    }
+
+    .enlace{
+
+        font-size: 20px;
+        letter-spacing: none;
+    
+    }
+
+    .contenedorSeccion{
+
+        background-color: transparent;
+        height: 650px;
+    }
+
+    .contenedorSeccionDos{
+        height: 680px;
+    }
+
+    .titulo_menu img{
+
+        width: 80px;
+    }
+
+    .tituloUno{
+
+        font-size: 30px;
+        margin: 0 40%;
+        margin-top: 10px;
+    }
+
+    .promo{
+
+        margin-left: 5%;
+        width: 19%;
+        height: 400px;
+    }
+
+    .promo_img  img{
+
+        width: 170px;
+        margin-left: 35px;
+    }
+    
+    .promo_text h2{
+    
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    
+    .promo_text ul li{
+    
+        list-style: none;
+        color: gray;
+        font-size: 20px;
+        margin-left: 20%;
+        margin-top: 10px;
+        
+    }
+    
+
+
+    
+}
