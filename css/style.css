@@ -149,6 +149,17 @@ i{
     border-radius: 10px;
     background-color: black;
     margin: 0 10%;
+    animation: EntrarDerecha .8s ease;
+}
+
+@keyframes EntrarDerecha{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0);
+    }
+
 }
 
 .contenedorSeccion{
