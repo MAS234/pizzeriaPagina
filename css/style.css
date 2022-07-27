@@ -3,6 +3,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 :root{
@@ -21,7 +22,7 @@ body{
     background-image: url(https://pngimg.com/uploads/pizza/pizza_PNG44090.png);
     background-position: center;
     margin: auto;
-    background-size: 300px;
+    background-size: 70%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color:#d62828 ;
@@ -148,7 +149,7 @@ i{
     color: white;
     border-radius: 10px;
     background-color: black;
-    margin: 0 10%;
+    margin: 0 15%;
     animation: EntrarDerecha .8s ease;
 }
 
@@ -165,7 +166,9 @@ i{
 .contenedorSeccion{
 
     background-color: transparent;
+    width: 100%;
     height: 700px;
+    
     
 }
 
@@ -191,7 +194,7 @@ i{
 .promo{
 
     box-shadow:2px 2px 10px black;
-    padding: 10px;
+    padding: 5%;
     height: 180px;
     width: 35%;
     border-radius: 10px;
@@ -228,7 +231,7 @@ i{
     list-style: none;
     color: gray;
     font-size: 10px;
-    margin: 5px -5%;
+    text-align: center;
     
 }
 
@@ -237,13 +240,14 @@ i{
 
 .contenedorSeccionDos{
 
-    height: 750px;
+    height: 765px;
+    width: 100%;
     background-color: black;
     border: 1px solid transparent;
     background-image: url(https://pizzascaseras.cl/wp-content/uploads/2020/07/pizza2.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 300px ;
+    background-size: 60% ;
 
 }
 
@@ -481,7 +485,7 @@ i{
 .contenedorDos{
 
     grid-area: contenedorDos;
-    margin-left: 1.5%;
+    margin: 0 3%;
     margin-top: 20px;
    
 }
@@ -514,10 +518,14 @@ i{
 }
 
 
-
-
 /* MEDIA  */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 800px){
+
+    body{
+
+        background-size: 25%;
+     
+    }
 
     .navegador{
         --estado-cerrado:scale(0);
@@ -760,11 +768,9 @@ i{
 
 
 .contenedorDos{
-
-    margin-left: 2.5%;
+    grid-area: contenedorDos;
+    margin: 0 35%;
     margin-top: 20px;
-    text-align: center;
-   
 }
 
 
